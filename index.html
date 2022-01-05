@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>square pattern - javascript</title>
+</head>
+
+<body>
+    <h2>First Project</h2>
+
+    <input id="height" type="text" placeholder="Height">
+    <input id="width" type="text" placeholder="Width">
+    <button class="myBtn">click</button>
+
+    <script>
+        var btn = document.querySelector("button")
+        console.log(btn)
+
+
+        btn.onclick = function() {
+            var height = document.getElementById("height").value;
+            var width = document.getElementById("width").value;
+
+            console.log(height);
+            console.log(width);
+
+
+
+            let n = height;
+            let k = width;
+            let string = "";
+            for (let i = 0; i < n; i++) {
+                for (let j = 0; j < k; j++) {
+                    if (i == 0 || i == n - 1 || j == 0 || j == k - 1) {
+                        string += "*";
+                    } else {
+                        string += " "
+                    }
+
+                }
+                string += "\n"
+            }
+
+            // console.log("Hello")
+            console.log(string);
+        }
+    </script>
+</body>
+
+</html>
